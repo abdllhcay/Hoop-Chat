@@ -13,7 +13,7 @@ MAX_CLI = 10
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s', datefmt='%d/%m/%Y %I:%M:%S %p')
 
 try:
-	db = MySQLdb.connect(host="localhost", user="root", passwd="1", db="hoop")
+	db = MySQLdb.connect(host="localhost", user="###", passwd="###", db="hoop")
 except:
 	logging.info("MySQL connection error")
 

@@ -1,1 +1,2 @@
 # hoopChat
+School project

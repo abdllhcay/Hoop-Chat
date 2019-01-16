@@ -100,7 +100,7 @@ class Connection(threading.Thread):
 				else:
 					self.conn.send("RST")
 
-			if self.credentials[0] == "#":
+			if self.credentials[0] == "#": # If has got a new membership request
 				self.reg_username = strip_non_ascii(self.credentials.split(" ")[0][1:])
 				self.reg_password = strip_non_ascii(self.credentials.split(" ")[1])
 				self.reg_password = self.reg_password.strip()

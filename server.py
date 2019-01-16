@@ -88,7 +88,7 @@ class Connection(threading.Thread):
 					while True:
 						self.buf = self.conn.recv(1024)
 						if self.buf:
-							if self.buf[0] == "!":
+							if self.buf[0] == "!": # If message contains add friend request
 								self.friend_uname = self.buf.split(' ')[0][1:]
 								cursor.execute("INSERT INTO friends (username1, username2) VALUES (%s, %s)", (self.username, self.friend_uname))
 								db.commit()
